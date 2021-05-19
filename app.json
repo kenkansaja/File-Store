@@ -1,12 +1,6 @@
 {
   "name": "File Store",
-  "description": "Telegram bot to store your telegram files",
-  "keywords": [
-    "telegram",
-    "best",
-    "Store",
-    "Files"
-  ],
+  "description": "Bot yang mampu mengubah file menjadi link bekerja juga untuk umum",
   "logo": "https://telegra.ph/file/a112fce4e23d859badcd4.jpg",
   "repository": "https://github.com/kenkannih/File-Store",
   "env": {
