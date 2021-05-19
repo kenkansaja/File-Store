@@ -45,14 +45,6 @@ async def close_cb(c, m):
     await m.message.delete()
     await m.message.reply_to_message.delete()
 
-    # editing message
-    await m.message.edit(
-        text=Harap tunggu...,
-        reply_markup=InlineKeyboardMarkup(buttons),
-        disable_web_page_preview=True
-    )
-
-
 @Client.on_callback_query("home")
 async def home_cb(c, m):
     await m.answer()
