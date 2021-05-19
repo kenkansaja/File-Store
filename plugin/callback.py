@@ -17,15 +17,14 @@ async def help_cb(c, m):
     await m.answer()
 
     # help text
-    help_text = """**You need Help?? 😎**
+    help_text = """**Kamu butuh bantuan?? 😎**
 
-Just send me the files i will store file and give you share able link
+Kirimkan saja saya file, saya akan menyimpan file dan memberi Anda tautan yang dapat dibagikan
 
 
-**You can use me in channel too 😉**
+**Anda juga dapat menggunakan saya di Channel 😉**
 
-Make me admin in your channel with edit permission. Thats enough now continue uploading files in channel i will edit all posts and add share able link url buttons"""
-
+Jadikan saya admin di saluran Anda dengan izin edit. Itu cukup sekarang lanjutkan mengunggah file di saluran saya akan mengedit semua postingan dan menambahkan tautan yang dapat dibagikan lewat tombol"""
     # creating buttons
     buttons = [
         [
