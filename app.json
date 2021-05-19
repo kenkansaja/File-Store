@@ -7,33 +7,31 @@
     "Store",
     "Files"
   ],
-  "logo": "https://telegra.ph/file/bdd3352951be090a56590.jpg",
-  "success_url": "https://telegram.dog/filestore_Nsbot",
-  "website": "https://github.com/Ns-Bots/TG-File-Store",
-  "repository": "https://github.com/Ns-Bots/TG-File-Store",
+  "logo": "https://telegra.ph/file/a112fce4e23d859badcd4.jpg",
+  "repository": "https://github.com/kenkannih/File-Store",
   "env": {
     "WEBHOOK": {
       "description": "Setting this to ANYTHING will enable webhooks when in env mode",
       "value": "ANYTHING"
     },
     "BOT_TOKEN": {
-      "description": "Your bot token, as a string.",
+      "description": "Dapatkan di @botfather.",
       "value": ""
     },
     "API_ID": {
-      "description": "Get this value from https://my.telegram.org",
+      "description": "Dapatkan di https://my.telegram.org",
       "value": ""
     },
     "DB_CHANNEL_ID": {
-      "description": "give me the telegram channel ID here (better this should be private channel)",
+      "description": "Berikan saya channel id kamu (berfungsi juga buat private channel)",
       "value": ""
     },
     "OWNER_ID": {
-      "description": "give your telegram user id here",
+      "description": "Isi dengan id kamu",
       "value": ""
     },
     "API_HASH": {
-      "description": "Get this value from https://my.telegram.org",
+      "description": "Ambil di  https://my.telegram.org",
       "value": ""
     }
   },
