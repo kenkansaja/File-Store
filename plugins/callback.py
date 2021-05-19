@@ -9,7 +9,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 from .commands import start
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-OWNER_ID = os.environ.get("OWNER_ID"="None")
+OWNER_ID = os.environ.get("OWNER_ID=None")
 
 
 @Client.on_callback_query(filters.regex('^help$'))
