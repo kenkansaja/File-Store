@@ -27,8 +27,6 @@ Saya adalah bot pembuat link permanen dari berkas yang kamu kirim 📂.
 
     # Buttons
     buttons = [
-        [
-            InlineKeyboardButton('My Father 👨‍✈️', url=f"https://t.me/{owner_username}"),
             InlineKeyboardButton('Help 💡', callback_data="help")
         ],
         [
