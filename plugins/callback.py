@@ -9,7 +9,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 from .commands import start
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-OWNER_ID = os.environ.get("OWNER_ID=None")
+OWNER_ID = os.environ.get("OWNER_ID")
 
 
 @Client.on_callback_query(filters.regex('^help$'))
@@ -65,6 +65,13 @@ async def about_cb(c, m):
 
 🧰 𝐅𝐫𝐚𝐦𝐞𝐰𝐨𝐫𝐤: [Pyrogram](https://github.com/pyrogram/pyrogram)
 
+👨‍💻 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫: {owner.mention(style='md')}
+
+📢 𝐂𝐡𝐚𝐧𝐧𝐞𝐥: [NS BOT UPDATES](https://t.me/Ns_bot_updates)
+
+👥 𝐆𝐫𝐨𝐮𝐩: [Ns BOT SUPPORT](https://t.me/Ns_Bot_supporters)
+
+🌐𝐒𝐨𝐮𝐫𝐜𝐞 𝐂𝐨𝐝𝐞: [Press Me 🥰](https://github.com/Ns-Bots/TG-File-Store)
 """
 
     # creating buttons
