@@ -35,7 +35,7 @@ async def help_cb(c, m):
     ]
 
     # editing as help message
-    await m.message(
+    await m.message.edit: (
         text=help_text,
         reply_markup=InlineKeyboardMarkup(buttons))
 
