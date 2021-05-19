@@ -11,7 +11,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
-@Client.on_callback_query('help')
+@Client.on_callback_query("help")
 async def help_cb(c, m):
     await m.answer()
 
@@ -28,11 +28,9 @@ async def help_cb(c, m):
     # creating buttons
     buttons = [
         [
-            InlineKeyboardButton('BERANDA 🔝', callback_data='home'),
-            InlineKeyboardButton('CHANNEL 💬', callback_data='client.channel')
-        ],
+            InlineKeyboardButton('BERANDA 🔝', callback_data="home"),
         [
-            InlineKeyboardButton('TUTUP ⛔', callback_data='close')
+            InlineKeyboardButton('TUTUP ⛔', callback_data="close")
         ]
     ]
 
