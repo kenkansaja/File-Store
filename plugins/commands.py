@@ -18,7 +18,7 @@ async def start(c, m, cb=False):
     owner_username = owner.username if owner.username else 'Ns_bot_updates'
 
     # start text
-    text = f"""Hi {m.from_user.mention(style='md')}
+    text = f"""Hay {m.from_user.mention(style='md')}
 
 Saya adalah bot pembuat link permanen dari berkas yang kamu kirim 📂.
 
@@ -28,8 +28,8 @@ Saya adalah bot pembuat link permanen dari berkas yang kamu kirim 📂.
     # Buttons
     buttons = [
            [
-            InlineKeyboardButton('Help 💡', callback_data="help"),
-            InlineKeyboardButton('About 📕', callback_data="about")
+            InlineKeyboardButton('📝 BANTUAN 📝', callback_data="help"),
+            InlineKeyboardButton('📖 TENTANG 📖', callback_data="about")
        ]
     ]
 
@@ -52,15 +52,15 @@ Saya adalah bot pembuat link permanen dari berkas yang kamu kirim 📂.
 
         if chat_id.startswith('-100'): #if file from channel
             channel = await c.get_chat(int(chat_id))
-            caption += "\n\n\n**--Uploader Details:--**\n\n"
-            caption += f"__📢 Channel Name:__ `{channel.title}`\n\n"
+            caption += "\n\n\n**--DETAIL UNGGAHAN:--**\n\n"
+            caption += f"__📢 Nama Channel:__ `{channel.title}`\n\n"
             caption += f"__👤 Channel Id:__ `{channel.id}`\n\n"
             caption += f"__💬 DC ID:__ {channel.dc_id}\n\n"
-            caption += f"__👁 Members Count:__ {channel.members_count}\n\n" 
+            caption += f"__👁 Jumlah Anggota:__ {channel.members_count}\n\n" 
 
         else: #if file not from channel
             user = await c.get_users(int(chat_id))
-            caption += "\n\n\n**--Uploader Details:--**\n\n"
+            caption += "\n\n\n**--DETAIL UNGGAHAN:--**\n\n"
             caption += f"__💬 DC ID:__ {user.dc_id}\n\n"
 
         await msg.copy(m.from_user.id, caption=caption)
