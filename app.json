@@ -5,7 +5,7 @@
   "repository": "https://github.com/kenkannih/File-Store",
   "env": {
     "WEBHOOK": {
-      "description": "Setting this to ANYTHING will enable webhooks when in env mode",
+      "description": "Menyetel ini ke ANYTHING akan mengaktifkan webhook saat dalam mode env",
       "value": "ANYTHING"
     },
     "BOT_TOKEN": {
