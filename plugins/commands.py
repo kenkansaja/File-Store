@@ -15,8 +15,7 @@ OWNER_ID = os.environ.get("OWNER_ID=None")
 @Client.on_message(filters.command('start') & filters.incoming & filters.private)
 async def start(c, m, cb=False):
     owner = await c.get_users(int(OWNER_ID))
-    owner_username = owner.username if owner.username else 'Ns_bot_updates'
-
+    
     # start text
     text = f"""Hey! {m.from_user.mention(style='md')}
 
@@ -25,7 +24,7 @@ async def start(c, m, cb=False):
 `You can store your Telegram Media for permanent Link!`
 
 
-**👲 Maintained By:** {owner.mention(style='md')}
+
 """
 
     # Buttons
