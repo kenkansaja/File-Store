@@ -2,6 +2,7 @@ import os
 import urllib
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+DB_CHANNEL_ID = os.environ.get("DB_CHANNEL_ID=None")
 
 
 #################################### FOR PRIVATE ################################################
