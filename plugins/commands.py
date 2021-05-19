@@ -28,9 +28,9 @@ Saya adalah bot pembuat link permanen dari berkas yang kamu kirim 📂.
     # Buttons
     buttons = [
             InlineKeyboardButton('Help 💡', callback_data="help")
-        ]
-        [
+        ],
             InlineKeyboardButton('About 📕', callback_data="about")
+       ]
     ]
 
     # when button home is pressed
