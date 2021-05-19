@@ -31,7 +31,6 @@ Saya adalah bot pembuat link permanen dari berkas yang kamu kirim 📂.
         ]
         [
             InlineKeyboardButton('About 📕', callback_data="about")
-        ]
     ]
 
     # when button home is pressed
