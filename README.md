@@ -24,7 +24,10 @@ Tekan tombol untuk deploy config vars di heroku. 👇
 - Bahasa yang di gunakan [<img src="https://telegra.ph/file/960ed8709acaf8c68b894.jpg" width="100" height="30">](https://www.python.org/)
 - Bekerja dalam [<img src="https://telegra.ph/file/804f06d1590f7619a63ed.jpg" width="100" height="40">](https://github.com/pyrogram/pyrogram)
 
-
+## UPDATE
+- Di Ubah ke bahasa indonesia
+- Menyembunyikan nama pengirim
+- Tombol di percantik
 
 <p align="center">
 #### TERIMA KASIH ####
