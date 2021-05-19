@@ -24,7 +24,7 @@ Kirimkan saja saya file, saya akan menyimpan file dan memberi Anda tautan yang d
 
 **Anda juga dapat menggunakan saya di Channel 😉**
 
-Jadikan saya admin di saluran Anda dengan izin edit. Itu cukup sekarang lanjutkan mengunggah file di saluran saya akan mengedit semua postingan dan menambahkan tautan yang dapat dibagikan lewat tombol"""
+Jadikan saya admin di Channel Anda dengan izin edit. Itu cukup sekarang lanjutkan mengunggah file di Channel anda, Dan saya akan mengedit semua postingan dan menambahkan tautan yang dapat dibagikan lewat tombol"""
     # creating buttons
     buttons = [
         [
