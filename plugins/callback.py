@@ -28,11 +28,11 @@ Jadikan saya admin di saluran Anda dengan izin edit. Itu cukup sekarang lanjutka
     # creating buttons
     buttons = [
         [
-            InlineKeyboardButton('Home 🏕', callback_data='home'),
-            InlineKeyboardButton('About 📕', callback_data='about')
+            InlineKeyboardButton('🎛 BERANDA 🎛', callback_data='home'),
+            InlineKeyboardButton('📖 TENTANG 📖', callback_data='about')
         ],
         [
-            InlineKeyboardButton('Close 🔐', callback_data='close')
+            InlineKeyboardButton('⛔ TUTUP ⛔', callback_data='close')
         ]
     ]
 
@@ -68,11 +68,11 @@ async def about_cb(c, m):
     # creating buttons
     buttons = [
         [
-            InlineKeyboardButton('Home 🏕', callback_data='home'),
-            InlineKeyboardButton('Help 💡', callback_data='help')
+            InlineKeyboardButton('🎛 BERANDA 🎛', callback_data='home'),
+            InlineKeyboardButton('📝BANTUAN 📝', callback_data='help')
         ],
         [
-            InlineKeyboardButton('Close 🔐', callback_data='close')
+            InlineKeyboardButton('⛔ TUTUP ⛔', callback_data='close')
         ]
     ]
 
