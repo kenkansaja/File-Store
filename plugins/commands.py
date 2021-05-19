@@ -9,22 +9,20 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 DB_CHANNEL_ID = os.environ.get("DB_CHANNEL_ID")
-OWNER_ID = os.environ.get("OWNER_ID=None")
+OWNER_ID = os.environ.get("OWNER_ID")
 
 
 @Client.on_message(filters.command('start') & filters.incoming & filters.private)
 async def start(c, m, cb=False):
     owner = await c.get_users(int(OWNER_ID))
-    
+    owner_username = owner.username if owner.username else 'Ns_bot_updates'
+
     # start text
-    text = f"""Hey! {m.from_user.mention(style='md')}
+    text = f"""Hi {m.from_user.mention(style='md')}
 
-💡 ** I am Telegram File Store Bot**
+I am a file store bot with permanent link 📂.
 
-`You can store your Telegram Media for permanent Link!`
-
-
-
+**Maintained By:** {owner.mention(style='md')}
 """
 
     # Buttons
@@ -52,12 +50,12 @@ async def start(c, m, cb=False):
         if msg.empty:
             owner = await c.get_users(int(OWNER_ID))
             return await m.reply_text(f"🥴 Sorry bro your file was missing\n\nPlease contact my owner 👉 {owner.mention(style='md')}")
-        
-        caption = f"{msg.caption.markdown}\n\n\n" if msg.caption else ""
+
+        caption = msg.caption.markdown
 
         if chat_id.startswith('-100'): #if file from channel
             channel = await c.get_chat(int(chat_id))
-            caption += "**--Uploader Details:--**\n\n"
+            caption += "\n\n\n**--Uploader Details:--**\n\n"
             caption += f"__📢 Channel Name:__ `{channel.title}`\n\n"
             caption += f"__🗣 User Name:__ @{channel.username}\n\n" if channel.username else ""
             caption += f"__👤 Channel Id:__ `{channel.id}`\n\n"
@@ -66,7 +64,7 @@ async def start(c, m, cb=False):
 
         else: #if file not from channel
             user = await c.get_users(int(chat_id))
-            caption += "**--Uploader Details:--**\n\n"
+            caption += "\n\n\n**--Uploader Details:--**\n\n"
             caption += f"__🦚 First Name:__ `{user.first_name}`\n\n"
             caption += f"__🐧 Last Name:__ `{user.last_name}`\n\n" if user.last_name else ""
             caption += f"__👁 User Name:__ @{user.username}\n\n" if user.username else ""
@@ -87,7 +85,11 @@ async def start(c, m, cb=False):
 @Client.on_message(filters.command('me') & filters.incoming & filters.private)
 async def me(c, m):
     me = await c.get_users(m.from_user.id)
-    text = "--**YOUR DETAILS:**--\n\n"
+    text = "--**YOUR DETAILS:**--\n\n\n"
+    text += f"__🦚 First Name:__ `{me.first_name}`\n\n"
+    text += f"__🐧 Last Name:__ `{me.last_name}`\n\n" if me.last_name else ""
+    text += f"__👁 User Name:__ @{me.username}\n\n" if me.username else ""
+    text += f"__👤 User Id:__ `{me.id}`\n\n"
     text += f"__💬 DC ID:__ {me.dc_id}\n\n" if me.dc_id else ""
     text += f"__✔ Is Verified By TELEGRAM:__ `{me.is_verified}`\n\n" if me.is_verified else ""
     text += f"__👺 Is Fake:__ {me.is_fake}\n\n" if me.is_fake else ""
