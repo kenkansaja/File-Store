@@ -15,18 +15,16 @@ async def storefile(c, m):
        media = m.audio
 
     # text
-    text = "--**File Details:**--\n\n\n"
-    text += f"📂 __File Name:__ `{media.file_name}`\n\n"
-    text += f"💽 __Mime Type:__ `{media.mime_type}`\n\n"
-    text += f"📊 __File Size:__ `{humanbytes(media.file_size)}`\n\n"
+    text = "--**Detail Berkas:**--\n\n\n"
+    text += f"📂 __Nama Berkas:__ `{media.file_name}`\n\n"
+    text += f"💽 __Tipe:__ `{media.mime_type}`\n\n"
+    text += f"📊 __Ukuran Berkas:__ `{humanbytes(media.file_size)}`\n\n"
     if not m.document:
-        text += f"🎞 __Duration:__ `{TimeFormatter(media.duration * 1000)}`\n\n"
+        text += f"🎞 __Durasi:__ `{TimeFormatter(media.duration * 1000)}`\n\n"
         if m.audio:
-            text += f"🎵 __Title:__ `{media.title}`\n\n"
-            text += f"🎙 __Performer:__ `{media.performer}`\n\n" 
-    text += f"__✏ Caption:__ `{m.caption}`\n\n"
-    text += "**--Uploader Details:--**\n\n\n"
-    text += f"__💬 DC ID:__ {m.from_user.dc_id}\n\n"
+            text += f"🎵 __Judul:__ `{media.title}`\n\n"
+            text += f"🎙 __Performa:__ `{media.performer}`\n\n" 
+    
 
     # if databacase channel exist forwarding message to channel
     if DB_CHANNEL_ID:
@@ -41,8 +39,8 @@ async def storefile(c, m):
 
     # making buttons
     buttons = [[
-        InlineKeyboardButton(text="Url 🔗", url=url),
-        InlineKeyboardButton(text="Share 👤", url=share_url)
+        InlineKeyboardButton(text="LINK 🔗", url=url),
+        InlineKeyboardButton(text="SHARE 👤", url=share_url)
     ]]
 
     # sending message
@@ -63,21 +61,16 @@ async def storefile_channel(c, m):
        media = m.audio
 
     # text
-    text = "**File Details:**\n\n\n"
-    text += f"📂 __File Name:__ `{media.file_name}`\n\n"
-    text += f"💽 __Mime Type:__ `{media.mime_type}`\n\n"
-    text += f"📊 __File Size:__ `{humanbytes(media.file_size)}`\n\n"
+    text = "**DETAIL BERKAS:**\n\n\n"
+    text += f"📂 __Nama Berkas:__ `{media.file_name}`\n\n"
+    text += f"💽 __Tipe:__ `{media.mime_type}`\n\n"
+    text += f"📊 __Ukuran Berkas:__ `{humanbytes(media.file_size)}`\n\n"
     if not m.document:
-        text += f"🎞 __Duration:__ `{TimeFormatter(media.duration * 1000)}`\n\n" if media.duration else ""
+        text += f"🎞 __Durasi:__ `{TimeFormatter(media.duration * 1000)}`\n\n"
         if m.audio:
-            text += f"🎵 __Title:__ `{media.title}`\n\n" if media.title else ""
-            text += f"🎙 __Performer:__ `{media.performer}`\n\n" if media.performer else ""
-    text += f"__✏ Caption:__ `{m.caption}`\n\n"
-    text += "**Uploader Details:**\n\n\n"
-    text += f"__📢 Channel Name:__ `{m.chat.title}`\n\n"
-    text += f"__👤 Channel Id:__ `{m.chat.id}`\n\n"
-    text += f"__💬 DC ID:__ {m.chat.dc_id}\n\n" if m.chat.dc_id else ""
-    text += f"__👁 Members Count:__ {m.chat.members_count}\n\n" if m.chat.members_count else ""
+            text += f"🎵 __Judul:__ `{media.title}`\n\n"
+            text += f"🎙 __Perfoma:__ `{media.performer}`\n\n"
+
 
     # if databacase channel exist forwarding message to channel
     if DB_CHANNEL_ID:
@@ -92,8 +85,8 @@ async def storefile_channel(c, m):
 
     # making buttons
     buttons = [[
-        InlineKeyboardButton(LINK="Url 🔗", url=url),
-        InlineKeyboardButton(SHARE="Share 👤", url=share_url)
+        InlineKeyboardButton(LINK="LINK 🔗", url=url),
+        InlineKeyboardButton(SHARE="SHARE 👤", url=share_url)
     ]]
 
     # Editing and adding the buttons
