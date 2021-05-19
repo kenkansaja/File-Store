@@ -1,36 +1,28 @@
-import os
-import logging
-import logging.config
-
-# Get logging configurations
-logging.getLogger().setLevel(logging.ERROR)
-logging.getLogger("pyrogram").setLevel(logging.WARNING)
-
-from .commands import start
-from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
-@Client.on_callback_query("help")
-async def help_cb(c, m):
-    await m.answer()
+from pyrogram import __version__
+from bot import Bot
+from config import OWNER_ID
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
-    # help text
-    help_text = """**Ada yang bisa saya bantu?? 🧐**
-
-★ Berikan saya file dan saya akan merubahnya menjadi link
-
-
-**kamu juga bisa menambahkan saya di channel 😉**
-
-★ Cukup jadikan saya admin dengan ijin edit. Saya akan mengupload ulang dengan menambahkan button url link"""
-
-    # creating buttons
-    buttons = [
-        [
-            InlineKeyboardButton('BERANDA 🔝', callback_data="home"),
-        [
-            InlineKeyboardButton('TUTUP ⛔', callback_data="close")
-        ]
-    ]
-
+@Bot.on_callback_query()
+async def cb_handler(client: Bot, query: CallbackQuery):
+    data = query.data
+    if data == "about":
+        await query.message.edit_text(
+            text = f"<b>○ Creator : <a href='tg://user?id={OWNER_ID}'>This Person</a>\n○ Language : <code>Python3</code>\n○ Library : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio {__version__}</a>\n○ Source Code : <a href='https://github.com/CodeXBotz/File-Sharing-Bot'>Click here</a>\n○ Owner : @kenkanasw\n○</b>",
+            disable_web_page_preview = True,
+            reply_markup = InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton("❌ TUTUP", callback_data = "close")
+                    ]
+                ]
+            )
+        )
+    elif data == "close":
+        await query.message.delete()
+        try:
+            await query.message.reply_to_message.delete()
+        except:
+            pass
