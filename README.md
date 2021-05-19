@@ -20,7 +20,7 @@ Tekan tombol untuk deploy config vars di heroku. 👇
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kenkannih/File-Store)
 
-## CARA PENGGUNAAN 🧰
+## PROGAM YANG DIGUNAKAN
 - Bahasa yang di gunakan [<img src="https://telegra.ph/file/960ed8709acaf8c68b894.jpg" width="100" height="30">](https://www.python.org/)
 - Bekerja dalam [<img src="https://telegra.ph/file/804f06d1590f7619a63ed.jpg" width="100" height="40">](https://github.com/pyrogram/pyrogram)
 
