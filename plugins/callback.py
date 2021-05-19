@@ -54,7 +54,7 @@ async def close_cb(c, m):
     )
 
 
-@Client.on_callback_query('home')
+@Client.on_callback_query("home")
 async def home_cb(c, m):
     await m.answer()
     await start(c, m, cb=True)
