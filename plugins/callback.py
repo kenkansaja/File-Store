@@ -34,12 +34,6 @@ async def help_cb(c, m):
         ]
     ]
 
-    # editing as help message
-    await m.message.edit: (
-        text=help_text,
-        reply_markup=InlineKeyboardMarkup(buttons))
-
-
 @Client.on_callback_query('close')
 async def close_cb(c, m):
     await m.message.delete()
