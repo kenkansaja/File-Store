@@ -56,13 +56,11 @@ async def about_cb(c, m):
     bot = await c.get_me()
 
     # about text
-    about_text = f"""--**My Details:**--
+    about_text = f"""--**DETAIL SAYA:**--
 
-🤖 𝐌𝐲 𝐍𝐚𝐦𝐞: {bot.mention(style='md')}
-    
-📝 𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞: [Python 3](https://www.python.org/)
-
-🧰 𝐅𝐫𝐚𝐦𝐞𝐰𝐨𝐫𝐤: [Pyrogram](https://github.com/pyrogram/pyrogram)
+🤖 BOT 𝐍𝐚𝐦𝐞: {bot.mention(style='md')} 
+💬 CHANNEL  : (https://t.me/tergantungmoodku)
+📄 SUPORT : (https://t.me/kenkanasw)
 """
 
     # creating buttons
