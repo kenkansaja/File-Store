@@ -2,12 +2,10 @@ import os
 import urllib
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-DB_CHANNEL_ID = os.environ.get("DB_CHANNEL_ID")
-
 
 
 #################################### FOR PRIVATE ################################################
-@Client.on_message((filters.document|filters.video|filters.audio|filters.photo) & filters.incoming & ~filters.edited & ~filters.channel)
+@Client.on_message((filters.document|filters.video|filters.audio|filters.photo) & ~filters.edited)
 async def storefile(c, m):
 
     if m.document:
@@ -31,14 +29,7 @@ async def storefile(c, m):
             if m.audio:
                 text += f"🎵 __Title:__ `{media.title}`\n\n" if media.title else ""
                 text += f"🎙 __Performer:__ `{media.performer}`\n\n" if media.performer else ""
-    text += f"__✏ Caption:__ `{m.caption}`\n\n" if m.caption else ""
-    text += "**--Uploader Details:--**\n\n\n"
-    text += f"__🦚 First Name:__ `{m.from_user.first_name}`\n\n"
-    text += f"__🐧 Last Name:__ `{m.from_user.last_name}`\n\n" if m.from_user.last_name else ""
-    text += f"__👁 User Name:__ @{m.from_user.username}\n\n" if m.from_user.username else ""
-    text += f"__👤 User Id:__ `{m.from_user.id}`\n\n"
-    text += f"__💬 DC ID:__ {m.from_user.dc_id}\n\n" if m.from_user.dc_id else ""
-
+    
     # if databacase channel exist forwarding message to channel
     if DB_CHANNEL_ID:
         msg = await m.copy(int(DB_CHANNEL_ID))
@@ -64,7 +55,7 @@ async def storefile(c, m):
 
 #################################### FOR CHANNEL################################################
 
-@Client.on_message((filters.document|filters.video|filters.audio|filters.photo) & filters.incoming & filters.channel & ~filters.edited)
+@Client.on_message((filters.document|filters.video|filters.audio|filters.photo) & ~filters.edited)
 async def storefile_channel(c, m):
 
     if m.document:
@@ -88,14 +79,7 @@ async def storefile_channel(c, m):
             if m.audio:
                 text += f"🎵 __Title:__ `{media.title}`\n\n" if media.title else ""
                 text += f"🎙 __Performer:__ `{media.performer}`\n\n" if media.performer else ""
-    text += f"__✏ Caption:__ `{m.caption}`\n\n"
-    text += "**Uploader Details:**\n\n\n"
-    text += f"__📢 Channel Name:__ `{m.chat.title}`\n\n"
-    text += f"__🗣 User Name:__ @{m.chat.username}\n\n" if m.chat.username else ""
-    text += f"__👤 Channel Id:__ `{m.chat.id}`\n\n"
-    text += f"__💬 DC ID:__ {m.chat.dc_id}\n\n" if m.chat.dc_id else ""
-    text += f"__👁 Members Count:__ {m.chat.members_count}\n\n" if m.chat.members_count else ""
-
+    
     # if databacase channel exist forwarding message to channel
     if DB_CHANNEL_ID:
         msg = await m.copy(int(DB_CHANNEL_ID))
