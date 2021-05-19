@@ -30,7 +30,7 @@ async def help_cb(c, m):
     buttons = [
         [
             InlineKeyboardButton('BERANDA 🔝', callback_data='home'),
-            InlineKeyboardButton('CHANNEL 💬', callback_data='channel_id')
+            InlineKeyboardButton('CHANNEL 💬', callback_data='client.channel')
         ],
         [
             InlineKeyboardButton('TUTUP ⛔', callback_data='close')
