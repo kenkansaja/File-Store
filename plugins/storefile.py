@@ -20,17 +20,13 @@ async def storefile(c, m):
     text += f"💽 __Mime Type:__ `{media.mime_type}`\n\n"
     text += f"📊 __File Size:__ `{humanbytes(media.file_size)}`\n\n"
     if not m.document:
-        text += f"🎞 __Duration:__ `{TimeFormatter(media.duration * 1000)}`\n\n" if media.duration else ""
+        text += f"🎞 __Duration:__ `{TimeFormatter(media.duration * 1000)}`\n\n"
         if m.audio:
-            text += f"🎵 __Title:__ `{media.title}`\n\n" if media.title else ""
-            text += f"🎙 __Performer:__ `{media.performer}`\n\n" if media.performer else ""
+            text += f"🎵 __Title:__ `{media.title}`\n\n"
+            text += f"🎙 __Performer:__ `{media.performer}`\n\n" 
     text += f"__✏ Caption:__ `{m.caption}`\n\n"
     text += "**--Uploader Details:--**\n\n\n"
-    text += f"__🦚 First Name:__ `{m.from_user.first_name}`\n\n"
-    text += f"__🐧 Last Name:__ `{m.from_user.last_name}`\n\n" if m.from_user.last_name else ""
-    text += f"__👁 User Name:__ @{m.from_user.username}\n\n" if m.from_user.username else ""
-    text += f"__👤 User Id:__ `{m.from_user.id}`\n\n"
-    text += f"__💬 DC ID:__ {m.from_user.dc_id}\n\n" if m.from_user.dc_id else ""
+    text += f"__💬 DC ID:__ {m.from_user.dc_id}\n\n"
 
     # if databacase channel exist forwarding message to channel
     if DB_CHANNEL_ID:
