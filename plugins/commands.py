@@ -87,7 +87,7 @@ async def start(c, m, cb=False):
 @Client.on_message(filters.command('me') & filters.incoming & filters.private)
 async def me(c, m):
     me = await c.get_users(m.from_user.id)
-    text = "--**YOUR DETAILS:**--\n\n\n
+    text = "--**YOUR DETAILS:**--"\n\n\n
     text += f"__💬 DC ID:__ {me.dc_id}\n\n" if me.dc_id else ""
     text += f"__✔ Is Verified By TELEGRAM:__ `{me.is_verified}`\n\n" if me.is_verified else ""
     text += f"__👺 Is Fake:__ {me.is_fake}\n\n" if me.is_fake else ""
