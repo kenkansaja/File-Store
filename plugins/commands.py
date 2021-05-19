@@ -20,9 +20,9 @@ async def start(c, m, cb=False):
     # start text
     text = f"""Hi {m.from_user.mention(style='md')}
 
-I am a file store bot with permanent link 📂.
+Saya adalah bot pembuat link permanen dari berkas yang kamu kirim 📂.
 
-**Maintained By:** {owner.mention(style='md')}
+
 """
 
     # Buttons
@@ -49,7 +49,7 @@ I am a file store bot with permanent link 📂.
 
         if msg.empty:
             owner = await c.get_users(int(OWNER_ID))
-            return await m.reply_text(f"🥴 Sorry bro your file was missing\n\nPlease contact my owner 👉 {owner.mention(style='md')}")
+            return await m.reply_text(f"🥴 Maaf File anda bermasalah")
 
         caption = msg.caption.markdown
 
@@ -77,7 +77,7 @@ I am a file store bot with permanent link 📂.
     else: # sending start message
         await m.reply_text(
             text=text,
-            quote=True,
+            quote=False,
             reply_markup=InlineKeyboardMarkup(buttons)
         )
 
@@ -96,4 +96,4 @@ async def me(c, m):
     text += f"__💨 Is Scam:__ {me.is_scam}\n\n" if me.is_scam else ""
     text += f"__📃 Language Code:__ {me.language_code}\n\n" if me.language_code else ""
 
-    await m.reply_text(text, quote=True)
+    await m.reply_text(text, quote=False)
