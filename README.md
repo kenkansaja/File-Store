@@ -1,3 +1,8 @@
+<p align="center">
+  <a href="https://github.com/kenkannih/File-Store">
+    <img src="https://telegra.ph/file/a112fce4e23d859badcd4.jpg" width ="250">
+  </a>
+
 ## FILE STORE
 Ini adalah bot yang akan membantu kalian dalam mengolah file menjadi link dan bebas di gunakan siapa saja
 
