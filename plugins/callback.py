@@ -34,12 +34,3 @@ async def help_cb(c, m):
         ]
     ]
 
-@Client.on_callback_query('close')
-async def close_cb(c, m):
-    await m.message.delete()
-    await m.message.reply_to_message.delete()
-
-@Client.on_callback_query("home")
-async def home_cb(c, m):
-    await m.answer()
-    await start(c, m, cb=True)
