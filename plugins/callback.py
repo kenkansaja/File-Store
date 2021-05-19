@@ -58,7 +58,7 @@ async def about_cb(c, m):
     # about text
     about_text = f"""--**DETAIL SAYA:**--
 
-🤖 :  {bot.mention(style='md')} 
+🤖 : {bot.mention(style='md')} 
 💬 : [CHANNEL](https://t.me/tergantungmoodku)
 📄 : [SUPORT](https://t.me/kenkanasw)
 """
