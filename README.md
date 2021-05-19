@@ -26,5 +26,5 @@ Tekan tombol untuk deploy config vars di heroku. 👇
 
 
 
-
+<p align="center">
 ######## TERIMA KASIH ########
