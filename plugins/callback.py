@@ -48,7 +48,7 @@ async def close_cb(c, m):
 
     # editing message
     await m.message.edit(
-        text=about_text,
+        text=Harap tunggu...,
         reply_markup=InlineKeyboardMarkup(buttons),
         disable_web_page_preview=True
     )
