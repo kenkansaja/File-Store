@@ -39,7 +39,7 @@ async def storefile(c, m):
 
     # making buttons
     buttons = [[
-        InlineKeyboardButton(text="LINK 🔗", url=url),
+        InlineKeyboardButton(text="CEK 🔗", url=url),
         InlineKeyboardButton(text="SHARE 👤", url=share_url)
     ]]
 
