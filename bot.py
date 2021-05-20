@@ -22,7 +22,7 @@ def main():
                  api_id=API_ID,
                  api_hash=API_HASH,
                  plugins=plugins,
-                 workers=☑️BOT SUDAH SIAP DI GUNAKAN)
+                 workers=100)
 
     app.run()
 
