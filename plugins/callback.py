@@ -27,14 +27,12 @@ Kirimkan saja saya file, saya akan menyimpan file dan memberi Anda tautan yang d
 Jadikan saya admin di Channel Anda dengan izin edit. Itu cukup sekarang lanjutkan mengunggah file di Channel anda, Dan saya akan mengedit semua postingan dan menambahkan tautan yang dapat dibagikan lewat tombol"""
     # creating buttons
     buttons = [
-        [
-            InlineKeyboardButton('🎛 BERANDA 🎛', callback_data='home'),
-            InlineKeyboardButton('📖 TENTANG 📖', callback_data='about')
+            InlineKeyboardButton('🎛 BERANDA 🎛', callback_data='home')    
         ],
         [
             InlineKeyboardButton('⛔ TUTUP ⛔', callback_data='close')
         ]
-    ]
+    
 
     # editing as help message
     await m.message.edit(
@@ -47,21 +45,6 @@ Jadikan saya admin di Channel Anda dengan izin edit. Itu cukup sekarang lanjutka
 async def close_cb(c, m):
     await m.message.delete()
     await m.message.reply_to_message.delete()
-
-
-@Client.on_callback_query(filters.regex('^about$'))
-async def about_cb(c, m):
-    await m.answer()
-    owner = await c.get_users(int(OWNER_ID))
-    bot = await c.get_me()
-
-    # about text
-    about_text = f"""--**DETAIL SAYA:**--
-
-🤖 : {bot.mention(style='md')} 
-💬 : [CHANNEL](https://t.me/tergantungmoodku)
-📄 : [SUPORT](https://t.me/kenkanasw)
-"""
 
     # creating buttons
     buttons = [
