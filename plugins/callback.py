@@ -27,12 +27,11 @@ Kirimkan saja saya file, saya akan menyimpan file dan memberi Anda tautan yang d
 Jadikan saya admin di Channel Anda dengan izin edit. Itu cukup sekarang lanjutkan mengunggah file di Channel anda, Dan saya akan mengedit semua postingan dan menambahkan tautan yang dapat dibagikan lewat tombol"""
     # creating buttons
     buttons = [
-            InlineKeyboardButton('🎛 BERANDA 🎛', callback_data='home')    
-        ],
-        [
+          [
+            InlineKeyboardButton('🎛 BERANDA 🎛', callback_data='home'),   
             InlineKeyboardButton('⛔ TUTUP ⛔', callback_data='close')
         ]
-    
+    ] 
 
     # editing as help message
     await m.message.edit(
