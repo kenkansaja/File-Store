@@ -29,7 +29,7 @@ Saya adalah bot pembuat link permanen dari berkas yang kamu kirim 📂.
     buttons = [
            [
             InlineKeyboardButton('📝 BANTUAN 📝', callback_data="help"),
-            InlineKeyboardButton('📖 TENTANG 📖', callback_data="about")
+            InlineKeyboardButton('📖 CLOSE 📖', callback_data="close")
        ]
     ]
 
