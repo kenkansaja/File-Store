@@ -46,7 +46,7 @@ Saya adalah bot pembuat link permanen dari berkas yang kamu kirim 📂.
 
         if msg.empty:
             owner = await c.get_users(int(OWNER_ID))
-            return await m.reply_text(f"🥴 Maaf File anda bermasalah")
+            return await m.reply_text(f"🥴Maaf File anda bermasalah")
 
         caption = f"{msg.caption.markdown}\n\n\n" if msg.caption else ""
 
@@ -60,8 +60,8 @@ Saya adalah bot pembuat link permanen dari berkas yang kamu kirim 📂.
 
         else: #if file not from channel
             user = await c.get_users(int(chat_id))
-            caption += "\n\n\n**--DETAIL UNGGAHAN:--**\n\n"
-            caption += f"__💬 SUMBER:__ {user.dc_id}\n\n"
+            caption += "\n\n\n**--Berkas:--**\n\n"
+            caption += f"__💬 Data:__ {user.dc_id}\n\n"
 
         await msg.copy(m.from_user.id, caption=caption)
 
