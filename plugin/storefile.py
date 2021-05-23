@@ -25,7 +25,7 @@ async def storefile(c, m):
             text += f"🎵 __Judul:__ `{media.title}`\n\n"
             text += f"🎙 __Performa:__ `{media.performer}`\n\n" 
     text += f"__✏ Caption:__ `{m.caption}`\n\n"
-    text += "**--Uploader Details:--**\n\n\n"
+    text += "**--Detail Upload:--**\n\n\n"
     text += f"__🦚 First Name:__ `{m.from_user.first_name}`\n\n"
     text += f"__🐧 Last Name:__ `{m.from_user.last_name}`\n\n" if m.from_user.last_name else ""
     text += f"__👁 User Name:__ @{m.from_user.username}\n\n" if m.from_user.username else ""
@@ -84,7 +84,6 @@ async def storefile_channel(c, m):
     # creating urls
     bot = await c.get_me()
     url = f"https://t.me/{bot.username}?start={m.chat.id}_{m.message_id}" if not DB_CHANNEL_ID else f"https://t.me/{bot.username}?start={m.chat.id}_{msg.message_id}"
-    txt = text.replace(' ', '%20').replace('\n', '%0A')
     share_url = f"tg://share?url={txt}File%20Link%20👉%20{url}"
 
     # making buttons
