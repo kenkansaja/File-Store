@@ -60,7 +60,7 @@ Saya adalah bot pembuat link permanen dari berkas yang kamu kirim 📂.
 
         else: #if file not from channel
             user = await c.get_users(int(chat_id))
-            caption += "\n\n\n**--Berkas:--**\n\n"
+            
             
 
         await msg.copy(m.from_user.id, caption=caption)
