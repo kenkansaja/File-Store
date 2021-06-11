@@ -10,12 +10,12 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 DB_CHANNEL_ID = os.environ.get("DB_CHANNEL_ID")
 OWNER_ID = os.environ.get("OWNER_ID")
-
+IKLAN = os.environ.get("IKLAN")
 
 @Client.on_message(filters.command('start') & filters.incoming & filters.private)
 async def start(c, m, cb=False):
     owner = await c.get_users(int(OWNER_ID))
-    owner_username = owner.username if owner.username else 'Ns_bot_updates'
+    owner_username = owner.username if owner.username
 
     # start text
     text = f"""Hay {m.from_user.mention(style='md')}
@@ -32,7 +32,9 @@ Saya adalah bot pembuat link permanen dari berkas yang kamu kirim 📂.
             InlineKeyboardButton('⛔ TUTUP ⛔', callback_data="close")
        ]
     ]
-
+  await relpy.message(
+      text = IKLAN
+   )
     # when button home is pressed
     if cb:
         return await m.message.edit(
