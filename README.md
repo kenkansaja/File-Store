@@ -1,3 +1,5 @@
+<p align="center"><img src="https://2.bp.blogspot.com/-eBu3-f3vzW0/V3E8UnYXsfI/AAAAAAAADHI/lJrPAoLSE70aO0F3W9fruZ8O-qJY76MSwCLcB/s1600/gambar-gerak-gif-chip-and-dale-terbaru.gif" style="width:100%"></p>
+
 <p align="center">
   <a href="https://github.com/kenkannih/File-Store">
     <img src="https://telegra.ph/file/e4ee7900b7edcdd92051f.jpg" width ="250">
