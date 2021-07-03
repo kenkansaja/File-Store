@@ -54,7 +54,7 @@ Saya adalah bot pembuat link permanen dari berkas yang kamu kirim 📂.
 
         if chat_id.startswith('-100'): #if file from channel
             channel = await c.get_chat(int(chat_id))
-            caption += "\n\n\n**--DETAIL UNGGAHAN:--**\n\n"
+            caption += f"\n\n\n**--DETAIL UNGGAHAN:--**\n\n"
             caption += f"__📢 Nama Channel:__ `{channel.title}`\n\n"
             caption += f"__👤 Channel Id:__ `{channel.id}`\n\n"
             caption += f"__💬 Sumber:__ {channel.dc_id}\n\n"
