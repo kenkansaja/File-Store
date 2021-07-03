@@ -79,7 +79,7 @@ Saya adalah bot pembuat link permanen dari berkas yang kamu kirim 📂.
 @Client.on_message(filters.command('me') & filters.incoming & filters.private)
 async def me(c, m):
     me = await c.get_users(m.from_user.id)
-    text = "--**DETAIL KAMU:**--\n\n\n"
+    text = f"--**DETAIL KAMU:**--\n\n\n"
     text += f"__💬 DC ID:__ {me.dc_id}\n\n"
     text += f"__✔ VERIFIKASI TELEGRAM:__ `{me.is_verified}`\n\n"
     text += f"__👺 INI PALSU:__ {me.is_fake}\n\n"
