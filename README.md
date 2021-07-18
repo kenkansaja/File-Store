@@ -35,5 +35,7 @@ Tekan tombol untuk deploy config vars di heroku. 👇
 - Menyembunyikan nama pengirim
 - Tombol di percantik
 
+
 <p align="center">
-#### TERIMA KASIH ####
+<b><i>TERIMA KASIH</i></b>
+</p>
