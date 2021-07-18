@@ -24,6 +24,10 @@
       "description": "Isi dengan id kamu",
       "value": ""
     },
+    "WAJIB_SUB": {
+      "description": "Isi dengan id gc atau channel sub kamu",
+      "value": ""
+    },
     "API_HASH": {
       "description": "Ambil di  https://my.telegram.org",
       "value": ""
