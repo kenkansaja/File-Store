@@ -11,7 +11,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 DB_CHANNEL_ID = os.environ.get("DB_CHANNEL_ID")
 OWNER_ID = os.environ.get("OWNER_ID")
 IKLAN = os.environ.get("IKLAN")
-
+WAJIB_SUB = os.environ.get("WAJIB_SUB")
 @Client.on_message(filters.command('start') & filters.incoming & filters.private)
 async def start(c, m, cb=False):
     owner = await c.get_users(int(OWNER_ID))
