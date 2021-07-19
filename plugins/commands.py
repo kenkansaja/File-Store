@@ -77,6 +77,8 @@ Saya adalah bot pembuat link permanen dari berkas yang kamu kirim 📂.
 
 @Client.on_message(filters.command('me') & filters.incoming & filters.private)
 async def me(c, m):
+    """ Ini akan dikirim saat perintah /me digunakan"""
+
     me = await c.get_users(m.from_user.id)
     text = f"\n\n\n--**DETAIL KAMU:**--\n\n\n"
     text += f"__💬 DC ID:__ {me.dc_id}\n\n"
@@ -85,5 +87,4 @@ async def me(c, m):
     text += f"__💨 INI SCAM:__ {me.is_scam}\n\n"
     text += f"__📃 KODE BAHASA:__ {me.language_code}\n\n"
 
-    await m.reply_text(text, quote=True
-)
+    await m.reply_text(text, quote=True)
