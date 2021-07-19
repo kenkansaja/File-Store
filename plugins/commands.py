@@ -58,10 +58,6 @@ Saya adalah bot pembuat link permanen dari berkas yang kamu kirim 📂.
             caption += f"__👤 Channel Id:__ `{channel.id}`\n\n"
             caption += f"__💬 Sumber:__ {channel.dc_id}\n\n"
             caption += f"__👁 Jumlah Anggota:__ {channel.members_count}\n\n" 
-
-        else: #if file not from channel
-            user = await c.get_users(int(chat_id))
-            
             
 
         await msg.copy(m.from_user.id, caption=caption)
