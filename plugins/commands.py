@@ -70,20 +70,3 @@ Saya adalah bot pembuat link permanen dari berkas yang kamu kirim 📂.
             reply_markup=InlineKeyboardMarkup(buttons)
         )
 
-@Client.on_message(filters.command('me') & filters.incoming & filters.private)
-async def me(c, m):
-    """ This will be sent when /me command was used"""
-
-    me = await c.get_users(m.from_user.id)
-    text = "--**YOUR DETAILS:**--\n\n\n"
-    text += f"__🦚 First Name:__ `{me.first_name}`\n\n"
-    text += f"__🐧 Last Name:__ `{me.last_name}`\n\n" if me.last_name else ""
-    text += f"__👁 User Name:__ @{me.username}\n\n" if me.username else ""
-    text += f"__👤 User Id:__ `{me.id}`\n\n"
-    text += f"__💬 DC ID:__ {me.dc_id}\n\n" if me.dc_id else ""
-    text += f"__✔ Is Verified By TELEGRAM:__ `{me.is_verified}`\n\n" if me.is_verified else ""
-    text += f"__👺 Is Fake:__ {me.is_fake}\n\n" if me.is_fake else ""
-    text += f"__💨 Is Scam:__ {me.is_scam}\n\n" if me.is_scam else ""
-    text += f"__📃 Language Code:__ {me.language_code}\n\n" if me.language_code else ""
-
-    await m.reply_text(text, quote=True)
