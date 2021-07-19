@@ -79,7 +79,7 @@ async def me(c, m):
     """ Ini akan dikirim saat perintah /me digunakan"""
 
     me = await c.get_users(m.from_user.id)
-    text = f"\n\n\n--**DETAIL KAMU:**--\n\n\n"
+    text = "--**DETAIL KAMU:**--\n\n\n"
     text += f"__💬 DC ID:__ {me.dc_id}\n\n"
     text += f"__✔ VERIFIKASI TELEGRAM:__ `{me.is_verified}`\n\n"
     text += f"__👺 INI PALSU:__ {me.is_fake}\n\n"
