@@ -11,20 +11,12 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 DB_CHANNEL_ID = os.environ.get("DB_CHANNEL_ID")
 OWNER_ID = os.environ.get("OWNER_ID")
 IKLAN = os.environ.get("IKLAN")
-WAJIB_SUB = os.environ.get("WAJIB_SUB")
+
 @Client.on_message(filters.command('start') & filters.incoming & filters.private)
 async def start(c, m, cb=False):
     owner = await c.get_users(int(OWNER_ID))
     owner_username = owner.username if owner.username
-
-    if WAJIB_SUB is not None:
-            back = await handle_force_sub(bot, cmd)
-            if back == 400:
-                return
-    # start text
-    else:
-                pass
-        try:
+#start text
     text = f"""Hay {m.from_user.mention(style='md')}
 
 Saya adalah bot pembuat link permanen dari berkas yang kamu kirim 📂.
