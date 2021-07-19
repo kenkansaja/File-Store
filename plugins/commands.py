@@ -59,7 +59,7 @@ Saya adalah bot pembuat link permanen dari berkas yang kamu kirim 📂.
             caption += f"__💬 Sumber:__ {channel.dc_id}\n\n"
             caption += f"__👁 Jumlah Anggota:__ {channel.members_count}\n\n" 
             
-
+        await send_msg.delete()
         await msg.copy(m.from_user.id, caption=caption)
 
 
