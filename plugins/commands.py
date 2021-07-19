@@ -74,7 +74,6 @@ Saya adalah bot pembuat link permanen dari berkas yang kamu kirim 📂.
             reply_markup=InlineKeyboardMarkup(buttons)
         )
 
-
 @Client.on_message(filters.command('me') & filters.incoming & filters.private)
 async def me(c, m):
     """ Ini akan dikirim saat perintah /me digunakan"""
