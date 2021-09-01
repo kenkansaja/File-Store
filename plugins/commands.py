@@ -15,7 +15,7 @@ IKLAN = os.environ.get("IKLAN")
 @Client.on_message(filters.command('start') & filters.incoming & filters.private)
 async def start(c, m, cb=False):
     owner = await c.get_users(int(OWNER_ID))
-    owner_username = owner.username if owner.username
+    owner_username = owner.username if owner.username else 'filelinkbot'
 #start text
     text = f"""Hay {m.from_user.mention(style='md')}
 
